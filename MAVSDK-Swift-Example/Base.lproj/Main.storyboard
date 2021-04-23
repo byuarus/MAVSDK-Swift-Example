@@ -362,10 +362,10 @@
                                 <rect key="frame" x="0.0" y="163" width="414" height="468"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="ZDW-HX-4ZY">
-                                        <rect key="frame" x="59" y="0.0" width="296" height="249"/>
+                                        <rect key="frame" x="59" y="0.0" width="296" height="295"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="V7m-Mb-uls">
-                                                <rect key="frame" x="0.0" y="0.0" width="148" height="249"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="148" height="295"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1UW-DY-BUo">
                                                         <rect key="frame" x="4" y="4" width="140" height="36"/>
@@ -418,6 +418,16 @@
                                                         <state key="normal" title="Return to launch"/>
                                                         <connections>
                                                             <action selector="returnToLaunchPressed:" destination="sxF-oW-WnJ" eventType="touchUpInside" id="Inp-jK-iMQ"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OlZ-mh-YnW">
+                                                        <rect key="frame" x="4" y="262" width="140" height="29"/>
+                                                        <color key="backgroundColor" red="0.4406479895" green="0.51737356189999995" blue="0.52941578629999997" alpha="0.69571382709999996" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                                        <color key="tintColor" red="0.1647058824" green="0.23137254900000001" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <state key="normal" title="TIMEOUT REP"/>
+                                                        <connections>
+                                                            <action selector="timeoutRep:" destination="sxF-oW-WnJ" eventType="touchUpInside" id="W9m-lm-Ygb"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>

@@ -1,5 +1,6 @@
 import UIKit
 import Mavsdk
+import RxSwift
 
 let UI_CORNER_RADIUS_BUTTONS = CGFloat(8.0)
 
@@ -37,6 +38,21 @@ class ActionsViewController: UIViewController {
         transitionToMulticopterButton.layer.cornerRadius = UI_CORNER_RADIUS_BUTTONS
         getTakeoffAltitudeButton.layer.cornerRadius = UI_CORNER_RADIUS_BUTTONS
         getMaxSpeedButton.layer.cornerRadius = UI_CORNER_RADIUS_BUTTONS
+        
+        //!!! After calling this line of code `setReturnToLaunchAltitude` will be stuck after a couple of calls
+        _ = drone!.camera.mode.subscribe()
+        //!!!
+    }
+    
+    @IBAction func timeoutRep(_ sender: Any) {
+        /// Tap button "TIMEOUT REP" a couple of times and it will block the main thread
+        print("setReturnToLaunchAltitude")
+        _ = drone!.action.setReturnToLaunchAltitude(relativeAltitudeM: 40)
+            .subscribe(onCompleted: {
+                print("setReturnToLaunchAltitude onCompleted")
+            }, onError: { (error) in
+                print("setReturnToLaunchAltitude error:\(error)")
+            })
     }
     
     @IBAction func armPressed(_ sender: Any) {

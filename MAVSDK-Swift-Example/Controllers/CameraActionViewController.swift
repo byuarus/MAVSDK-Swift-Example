@@ -116,8 +116,8 @@ class CameraActionViewController: UIViewController {
 
     func addVideoFeed(videoStreamInfo: Mavsdk.Camera.VideoStreamInfo) {
         let videoStreamUri = videoStreamInfo.settings.uri
-        let usesTcp = videoStreamUri.contains("rtspt")
-        let videoPath = videoStreamUri.replacingOccurrences(of: "rtspt", with: "rtsp")
+        let usesTcp = false// videoStreamUri.contains("rtspt") // DWS: TCP has better quality but will crash video feed as soon as you reconnect. I recommend to use UDP (tcp = false) for development
+        let videoPath = videoStreamUri.replacingOccurrences(of: "rtspt", with: "rtsp") // DWS: URL for video feed from the drone. If you need to use hard coded url paste it here
 
         rtspView = RTSPView(frame: cameraView.frame)
         

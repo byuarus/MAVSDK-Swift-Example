@@ -1,6 +1,6 @@
 # Example app using MAVSDK on iOS
 
-![](mavsdk-swift-example.gif)
+![Image](https://user-images.githubusercontent.com/15242786/119210802-b29cc500-ba84-11eb-9fc9-4ed181eac3ee.png)
 
 ### Getting started
 
@@ -12,3 +12,4 @@ xcodegen
 
 2. Open `MAVSDK-Swift-Example.xcodeproj` with Xcode.
 3. Set the signing team in the "General" tab of target `MAVSDK-Swift-Example`
+
